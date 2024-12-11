@@ -1,0 +1,21 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="?android:attr/selectableItemBackground">
+
+    <TextView
+        android:id="@+id/projectNameTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Project Name"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/contractorTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Contractor Name"
+        android:textSize="16sp" />
+</LinearLayout>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_gray_custom"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:fillViewport="true"
+        android:focusableInTouchMode="true"
+        android:descendantFocusability="beforeDescendants">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
+            android:adjustViewBounds="true"
+            android:contentDescription="Logo de la empresa"
+            app:srcCompat="@drawable/logo_empresa" />
+
+        <EditText
+            android:id="@+id/editTexEmailAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:hint="Correo Electrónico"
+            android:inputType="textEmailAddress"
+            android:minHeight="48dp"
+            android:textColor="@android:color/black"
+            android:textColorHint="@android:color/black" />
+
+        <EditText
+            android:id="@+id/editPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:hint="Contraseña"
+            android:inputType="textPassword"
+            android:minHeight="48dp"
+            android:textColor="@android:color/black"
+            android:textColorHint="@android:color/black" />
+
+        <!-- Checkbox para "Guardar credenciales" -->
+        <CheckBox
+            android:id="@+id/checkBoxSaveCredentials"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Guardar credenciales"
+            android:textColor="@android:color/black" />
+
+        <Button
+            android:id="@+id/buttonLogIn"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="56dp"
+            android:text="Iniciar sesión" />
+
+        <!-- Enlace para registrarse -->
+        <TextView
+            android:id="@+id/idRegistrarseActivity"
+            android:layout_width="wrap_content"
+            android:layout_height="34dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:minHeight="48dp"
+            android:text="Pulsa aquí para registrarse"
+            android:textColor="#076983" />
+
+        <!-- Enlace para olvidaste la contraseña -->
+        <TextView
+            android:id="@+id/idOlvidasteLaContraseña"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:text="¿Olvidaste la contraseña?"
+            android:textColor="#076983" />
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

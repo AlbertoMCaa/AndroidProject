@@ -1,0 +1,41 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="12dp">
+
+    <TextView
+        android:id="@+id/tvContratista"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Contratista"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        android:textColorHint="@android:color/black"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/tvPresupuesto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/black"
+        android:textColorHint="@android:color/black"
+        android:text="Presupuesto" />
+
+    <TextView
+        android:id="@+id/tvTiempoEstimado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/black"
+        android:textColorHint="@android:color/black"
+        android:text="Tiempo Estimado" />
+
+    <TextView
+        android:id="@+id/tvLocalizacion"
+        android:layout_width="wrap_content"
+        android:textColor="@android:color/black"
+        android:textColorHint="@android:color/black"
+        android:layout_height="wrap_content"
+        android:text="Localización" />
+</LinearLayout>

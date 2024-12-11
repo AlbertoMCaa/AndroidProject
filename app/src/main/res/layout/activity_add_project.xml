@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_gray_custom"
+    tools:context=".addProject">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:gravity="center_horizontal">
+
+        <!-- Logo -->
+        <ImageView
+            android:id="@+id/logoImageView"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@drawable/logo_empresa"
+            android:contentDescription="Logo de la empresa del ERP"
+            android:layout_gravity="center" />
+
+        <!-- Título -->
+        <TextView
+            android:id="@+id/titleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Añadir Proyecto"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"
+            android:layout_gravity="center"
+            android:textColor="@color/black" />
+
+        <!-- ID -->
+
+        <!-- Contratista -->
+        <EditText
+            android:id="@+id/idEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:hint="ID del proyecto"
+            android:inputType="number"
+            android:padding="12dp"
+            android:textColor="@android:color/black"
+            android:textColorHint="@android:color/black" />
+
+        <EditText
+            android:id="@+id/contratistaEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nombre del contratista"
+            android:textColor="@android:color/black"
+            android:textColorHint="@android:color/black"
+            android:inputType="text"
+            android:layout_marginTop="8dp"
+            android:padding="12dp" />
+
+        <!-- Presupuesto -->
+        <EditText
+            android:id="@+id/presupuestoEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:textColorHint="@android:color/black"
+            android:hint="Presupuesto"
+            android:inputType="numberDecimal"
+            android:layout_marginTop="8dp"
+            android:padding="12dp" />
+
+        <!-- Tiempo estimado -->
+        <EditText
+            android:id="@+id/tiempoEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:textColorHint="@android:color/black"
+            android:hint="Tiempo estimado"
+            android:inputType="text"
+            android:layout_marginTop="8dp"
+            android:padding="12dp" />
+
+        <!-- Localización -->
+        <EditText
+            android:id="@+id/localizacionEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Localización"
+            android:textColor="@android:color/black"
+            android:textColorHint="@android:color/black"
+            android:inputType="text"
+
+            android:layout_marginTop="8dp"
+            android:padding="12dp"/>
+
+        <!-- Botón Guardar -->
+        <Button
+            android:id="@+id/saveButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Guardar"
+            android:textColor="@color/light_gray_custom"
+            android:textColorHint="@android:color/black"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+</ScrollView>
