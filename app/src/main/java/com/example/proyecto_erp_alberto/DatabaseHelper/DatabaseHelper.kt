@@ -3,6 +3,7 @@ package com.example.proyecto_erp_alberto.DatabaseHelper
 import android.content.Context
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
+import android.widget.Toast
 import java.security.MessageDigest
 import java.security.SecureRandom
 import java.util.Base64
@@ -430,6 +431,36 @@ class DatabaseHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME
         finally
         {
             statement.close()
+            db.close()
+        }
+    }
+
+    fun getUserEmail(context: Context, username: String)
+    {
+        val db = readableDatabase
+        val sql = "SELECT $COLUMN_EMAIL FROM $TABLE_USERS WHERE $COLUMN_USERNAME = ?"
+        val cursor = db.rawQuery(sql, arrayOf(username))
+
+        try
+        {
+            if (cursor.moveToFirst())
+            {
+                val email = cursor.getString(cursor.getColumnIndexOrThrow(COLUMN_EMAIL))
+                Toast.makeText(context, "Tu correo es: $email", Toast.LENGTH_LONG).show()
+            }
+            else
+            {
+                Toast.makeText(context, "Correo no encontrado.", Toast.LENGTH_SHORT).show()
+            }
+        }
+        catch (e: Exception)
+        {
+            e.printStackTrace()
+            Toast.makeText(context, "Error al obtener el correo.", Toast.LENGTH_SHORT).show()
+        }
+        finally
+        {
+            cursor.close()
             db.close()
         }
     }

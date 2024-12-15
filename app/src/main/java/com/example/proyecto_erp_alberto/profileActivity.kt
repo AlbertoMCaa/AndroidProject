@@ -10,6 +10,7 @@ import android.widget.Toast
 import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
+import com.example.proyecto_erp_alberto.DatabaseHelper.DatabaseHelper
 import kotlin.system.exitProcess
 
 class profileActivity : AppCompatActivity() {
@@ -107,6 +108,29 @@ class profileActivity : AppCompatActivity() {
             val intent = Intent(this,registerActivity::class.java)
             intent.putExtra("user",user)
             startActivity(intent)
+        }
+        if(input.lowercase() == "activar tema oscuro")
+        {
+            findViewById<CheckBox>(R.id.darkModeCheckbox).isChecked = true
+            Toast.makeText(this, "Tema oscuro activado", Toast.LENGTH_SHORT).show()
+        }
+        if(input.lowercase() == "activar tema azul")
+        {
+            findViewById<CheckBox>(R.id.blueThemeCheckbox).isChecked = true
+            Toast.makeText(this, "Tema azul activado", Toast.LENGTH_SHORT).show()
+        }
+        if(input.lowercase() == "activar tema verde")
+        {
+            findViewById<CheckBox>(R.id.greenThemeCheckbox).isChecked = true
+            Toast.makeText(this, "Tema verde activado", Toast.LENGTH_SHORT).show()
+        }
+        if(input.lowercase() == "mi correo")
+        {
+            val userView = findViewById<TextView>(R.id.userName)
+            val user = userView.text.toString()
+
+            val db = DatabaseHelper(this)
+            db.getUserEmail(this, user)
         }
     }
 }
